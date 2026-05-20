@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>UnreaL LastChaoS Launcher</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="launcher-shell" data-state="ready">
+      <section class="hero-pane" aria-label="Главный экран лаунчера">
+        <img class="hero-backdrop" src="./assets/media/hero-start-poster.webp" alt="" />
+        <div class="hero-vignette"></div>
+
+        <header class="topbar">
+          <div class="brand-mark" aria-label="UnreaL LastChaoS">
+            <span class="brand-top">UnreaL</span>
+            <span class="brand-bottom">LastChaoS</span>
+          </div>
+          <nav class="top-actions" aria-label="Внешние ссылки">
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://discord.com" aria-label="Discord">
+              DS
+            </button>
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://t.me" aria-label="Telegram">
+              TG
+            </button>
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://vk.com" aria-label="VK">
+              VK
+            </button>
+            <button class="window-button" type="button" data-action="minimize" aria-label="Свернуть"></button>
+            <button class="window-button close" type="button" data-action="close" aria-label="Закрыть"></button>
+          </nav>
+        </header>
+
+        <div class="hero-copy">
+          <p class="eyebrow hero-tag-anim step-old" id="engineBadge" aria-live="polite">
+            <span class="tag-line tag-line-morph">
+              <span class="badge-slot">
+                <span class="badge-reel">
+                  <span id="badgeOld">Serious Engine 1.5</span>
+                  <span id="badgeNew">Unreal Engine 5.7</span>
+                </span>
+              </span>
+            </span>
+          </p>
+          <h1>
+            <span>Новый клиент</span>
+            <span>для старого мира</span>
+          </h1>
+          <p>
+            Проверка файлов, быстрый выбор канала обновлений и запуск игры из одного CEF-интерфейса.
+          </p>
+
+          <aside class="status-card" aria-label="Статус сервера">
+            <div class="status-row">
+              <span class="pulse-dot"></span>
+              <span>Сервер онлайн</span>
+            </div>
+            <strong>2 184</strong>
+            <span>игрока в мире</span>
+          </aside>
+        </div>
+
+        <aside class="status-card" aria-label="Статус сервера">
+          <div class="status-row">
+            <span class="pulse-dot"></span>
+            <span>Сервер онлайн</span>
+          </div>
+          <strong>2 184</strong>
+          <span>игрока в мире</span>
+        </aside>
+      </section>
+
+      <section class="control-pane" aria-label="Панель управления">
+        <div class="profile-strip">
+          <img src="./assets/cards/knight.png" alt="" />
+          <div>
+            <span class="muted-label">Аккаунт</span>
+            <strong>Guest Adventurer</strong>
+          </div>
+          <button class="small-button" type="button" data-action="login">Войти</button>
+        </div>
+
+        <div class="patch-card">
+          <div class="patch-heading">
+            <div>
+              <span class="muted-label">Текущая версия</span>
+              <strong id="versionLabel">0.9.12-live</strong>
+            </div>
+            <span class="build-badge" id="buildBadge">Готово</span>
+          </div>
+
+          <div class="progress-shell" aria-label="Прогресс обновления">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-meta">
+            <span id="statusText">Клиент проверен. Можно запускать игру.</span>
+            <span id="progressText">100%</span>
+          </div>
+
+          <div class="launcher-actions">
+            <button class="secondary-button" type="button" data-action="verify">Проверить</button>
+            <button class="play-button" type="button" data-action="play">
+              <span>Играть</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="news-panel" aria-label="Новости">
+          <div class="panel-title">
+            <span class="muted-label">Последние новости</span>
+            <button class="link-button" type="button" data-action="open-link" data-url="https://github.com/Zornigen/UnrealSite">
+              Все
+            </button>
+          </div>
+          <article class="news-item is-featured">
+            <img src="./assets/cards/titan.png" alt="" />
+            <div>
+              <span>Devlog 04</span>
+              <strong>Началась сборка лаунчера под CEF</strong>
+              <p>Каркас интерфейса готовится к подключению патчера, CDN и нативного запуска клиента.</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="./assets/cards/mage.png" alt="" />
+            <div>
+              <span>Patch notes</span>
+              <strong>Обновлены экраны классов и медиа</strong>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer-line">
+          <span>CEF launcher shell</span>
+          <span>Local assets mode</span>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
