@@ -1,0 +1,66 @@
+{
+  "aria": {
+    "heroPane": "Launcher-Startbildschirm",
+    "topActions": "Externe Links und Fenstersteuerung",
+    "minimize": "Minimieren",
+    "close": "Schliessen",
+    "serverStatus": "Serverstatus",
+    "controlPane": "Steuerbereich",
+    "news": "Neuigkeiten",
+    "progress": "Update-Fortschritt"
+  },
+  "hero": {
+    "titleTop": "Neuer Client",
+    "titleBottom": "fur die alte Welt",
+    "subtitle": "Dateipruefung, Update-Status und Spielstart aus einem Launcher."
+  },
+  "badge": {
+    "pairs": [
+      { "old": "Serious Engine 1.5", "new": "Unreal Engine 5.7" },
+      { "old": "DirectX 8.1", "new": "DirectX 12" },
+      { "old": "ASCII Shaders", "new": "HLSL Shaders" },
+      { "old": "CPU Particles", "new": "Niagara FX" },
+      { "old": "Baked Lighting", "new": "Lumen GI" }
+    ]
+  },
+  "server": { "online": "Server online", "players": "Spieler in der Welt" },
+  "account": {
+    "label": "Account",
+    "guestLabel": "Account nicht angemeldet",
+    "authorizedLabel": "Account angemeldet",
+    "guest": "Anmelden, um den Spielclient zu starten",
+    "hint": "",
+    "login": "Anmelden",
+    "authorized": "Account angemeldet",
+    "logout": "Abmelden"
+  },
+  "news": {
+    "title": "Neueste Nachrichten",
+    "all": "Alle",
+    "items": [
+      { "kicker": "Devlog 04", "title": "Launcher-Build mit WebView2 gestartet", "text": "Die Oberflaeche wird fuer Patcher, CDN und nativen Spielstart vorbereitet." },
+      { "kicker": "Patch notes", "title": "Klassen- und Medienbildschirme aktualisiert" }
+    ]
+  },
+  "patch": {
+    "versionLabel": "Aktuelle Version",
+    "readyBadge": "Bereit",
+    "checkingBadge": "Pruefung",
+    "launchingBadge": "Start",
+    "readyStatus": "Client geprueft. Bereit zum Spielen.",
+    "checkingStatus": "Manifest und lokale Dateien werden geprueft...",
+    "launchingStatus": "Spielclient wird gestartet...",
+    "verify": "Pruefen",
+    "play": "Spielen"
+  },
+  "auth": {
+    "title": "Anmelden",
+    "loginLabel": "Login oder email",
+    "loginPlaceholder": "Beliebigen Login eingeben",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Beliebiges Passwort",
+    "testNote": "Testmodus: derzeit werden beliebige Daten akzeptiert.",
+    "cancel": "Abbrechen",
+    "submit": "Anmelden"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "aria": {
+    "heroPane": "Ecran principal du lanceur",
+    "topActions": "Liens externes et controles de fenetre",
+    "minimize": "Reduire",
+    "close": "Fermer",
+    "serverStatus": "Statut du serveur",
+    "controlPane": "Panneau de controle",
+    "news": "Actualites",
+    "progress": "Progression de la mise a jour"
+  },
+  "hero": {
+    "titleTop": "Nouveau client",
+    "titleBottom": "pour l'ancien monde",
+    "subtitle": "Verification des fichiers, statut de mise a jour et lancement du jeu depuis un seul lanceur."
+  },
+  "badge": {
+    "pairs": [
+      { "old": "Serious Engine 1.5", "new": "Unreal Engine 5.7" },
+      { "old": "DirectX 8.1", "new": "DirectX 12" },
+      { "old": "ASCII Shaders", "new": "HLSL Shaders" },
+      { "old": "CPU Particles", "new": "Niagara FX" },
+      { "old": "Baked Lighting", "new": "Lumen GI" }
+    ]
+  },
+  "server": { "online": "Serveur en ligne", "players": "joueurs dans le monde" },
+  "account": {
+    "label": "Compte",
+    "guestLabel": "Compte non connecte",
+    "authorizedLabel": "Compte connecte",
+    "guest": "Connectez-vous pour lancer le client",
+    "hint": "",
+    "login": "Se connecter",
+    "authorized": "Compte connecte",
+    "logout": "Quitter"
+  },
+  "news": {
+    "title": "Dernieres nouvelles",
+    "all": "Tout",
+    "items": [
+      { "kicker": "Devlog 04", "title": "Creation du lanceur WebView2 commencee", "text": "L'interface se prepare pour le patcher, le CDN et le lancement natif du client." },
+      { "kicker": "Patch notes", "title": "Ecrans de classes et medias mis a jour" }
+    ]
+  },
+  "patch": {
+    "versionLabel": "Version actuelle",
+    "readyBadge": "Pret",
+    "checkingBadge": "Verification",
+    "launchingBadge": "Lancement",
+    "readyStatus": "Client verifie. Pret a jouer.",
+    "checkingStatus": "Verification du manifeste et des fichiers locaux...",
+    "launchingStatus": "Lancement du client...",
+    "verify": "Verifier",
+    "play": "Jouer"
+  },
+  "auth": {
+    "title": "Connexion",
+    "loginLabel": "Login ou email",
+    "loginPlaceholder": "Entrez n'importe quel login",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "N'importe quel mot de passe",
+    "testNote": "Mode test : toutes les donnees sont acceptees pour l'instant.",
+    "cancel": "Annuler",
+    "submit": "Connexion"
+  }
+}

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="launcher-shell" data-state="ready">
-      <section class="hero-pane" aria-label="Главный экран лаунчера">
+    <main class="launcher-shell" data-state="ready" data-auth="guest">
+      <section class="hero-pane" data-i18n-attr="aria-label:aria.heroPane">
         <video class="hero-backdrop" autoplay muted loop playsinline poster="./assets/media/hero-start-poster.webp">
           <source src="./assets/media/hero-start.mp4" type="video/mp4" />
         </video>
@@ -26,16 +26,11 @@
               <span class="title-front">LastChaoS</span>
             </span>
           </div>
-          <nav class="top-actions" aria-label="Внешние ссылки">
-            <button class="icon-button" type="button" data-action="open-link" data-url="https://discord.com" aria-label="Discord">
-              DS
-            </button>
-            <button class="icon-button" type="button" data-action="open-link" data-url="https://t.me" aria-label="Telegram">
-              TG
-            </button>
-            <button class="icon-button" type="button" data-action="open-link" data-url="https://vk.com" aria-label="VK">
-              VK
-            </button>
+
+          <nav class="top-actions" data-i18n-attr="aria-label:aria.topActions">
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://discord.com" aria-label="Discord">DS</button>
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://t.me" aria-label="Telegram">TG</button>
+            <button class="icon-button" type="button" data-action="open-link" data-url="https://vk.com" aria-label="VK">VK</button>
             <div class="lang-switcher" id="langSwitcher">
               <button class="lang-trigger" type="button" data-action="locale-toggle" aria-label="Language" aria-expanded="false">
                 <span id="localeLabel">RU</span>
@@ -49,8 +44,8 @@
                 <button type="button" class="lang-option" data-action="locale-select" data-locale="th">TH</button>
               </div>
             </div>
-            <button class="window-button" type="button" data-action="minimize" aria-label="Свернуть"></button>
-            <button class="window-button close" type="button" data-action="close" aria-label="Закрыть"></button>
+            <button class="window-button" type="button" data-action="minimize" data-i18n-attr="aria-label:aria.minimize"></button>
+            <button class="window-button close" type="button" data-action="close" data-i18n-attr="aria-label:aria.close"></button>
           </nav>
         </header>
 
@@ -66,97 +61,110 @@
             </span>
           </p>
           <h1>
-            <span>Новый клиент</span>
-            <span>для старого мира</span>
+            <span data-i18n="hero.titleTop"></span>
+            <span data-i18n="hero.titleBottom"></span>
           </h1>
-          <p>
-            Проверка файлов, быстрый выбор канала обновлений и запуск игры из одного CEF-интерфейса.
-          </p>
-
-          <aside class="status-card" aria-label="Статус сервера">
-            <div class="status-row">
-              <span class="pulse-dot"></span>
-              <span>Сервер онлайн</span>
-            </div>
-            <strong>2 184</strong>
-            <span>игрока в мире</span>
-          </aside>
+          <p data-i18n="hero.subtitle"></p>
         </div>
 
-        <aside class="status-card" aria-label="Статус сервера">
+        <aside class="status-card" data-i18n-attr="aria-label:aria.serverStatus">
           <div class="status-row">
             <span class="pulse-dot"></span>
-            <span>Сервер онлайн</span>
+            <span data-i18n="server.online"></span>
           </div>
           <strong>2 184</strong>
-          <span>игрока в мире</span>
+          <span data-i18n="server.players"></span>
         </aside>
       </section>
 
-      <section class="control-pane" aria-label="Панель управления">
+      <section class="control-pane" data-i18n-attr="aria-label:aria.controlPane">
         <div class="profile-strip">
-          <img src="./assets/cards/knight.png" alt="" />
-          <div>
-            <span class="muted-label">Аккаунт</span>
-            <strong>Guest Adventurer</strong>
+          <img id="profileAvatar" src="./assets/cards/knight.png" alt="" />
+          <div class="profile-copy">
+            <span class="muted-label" id="profileLabel" data-i18n="account.guestLabel"></span>
+            <strong id="profileName" data-i18n="account.guest"></strong>
+            <small id="profileMeta" data-i18n="account.hint"></small>
           </div>
-          <button class="small-button" type="button" data-action="login">Войти</button>
+          <button class="small-button auth-button" type="button" data-action="login" data-i18n="account.login"></button>
         </div>
 
-        <div class="patch-card">
-          <div class="patch-heading">
-            <div>
-              <span class="muted-label">Текущая версия</span>
-              <strong id="versionLabel">0.9.12-live</strong>
-            </div>
-            <span class="build-badge" id="buildBadge">Готово</span>
-          </div>
-
-          <div class="progress-shell" aria-label="Прогресс обновления">
-            <div class="progress-fill" id="progressFill"></div>
-          </div>
-          <div class="progress-meta">
-            <span id="statusText">Клиент проверен. Можно запускать игру.</span>
-            <span id="progressText">100%</span>
-          </div>
-
-          <div class="launcher-actions">
-            <button class="secondary-button" type="button" data-action="verify">Проверить</button>
-            <button class="play-button" type="button" data-action="play">
-              <span>Играть</span>
-            </button>
-          </div>
-        </div>
-
-        <section class="news-panel" aria-label="Новости">
+        <section class="news-panel" data-i18n-attr="aria-label:aria.news">
           <div class="panel-title">
-            <span class="muted-label">Последние новости</span>
-            <button class="link-button" type="button" data-action="open-link" data-url="https://github.com/Zornigen/UnrealSite">
-              Все
-            </button>
+            <span class="muted-label" data-i18n="news.title"></span>
+            <button class="link-button" type="button" data-action="open-link" data-url="https://github.com/Zornigen/UnrealSite" data-i18n="news.all"></button>
           </div>
           <article class="news-item is-featured">
             <img src="./assets/cards/titan.png" alt="" />
             <div>
-              <span>Devlog 04</span>
-              <strong>Началась сборка лаунчера под CEF</strong>
-              <p>Каркас интерфейса готовится к подключению патчера, CDN и нативного запуска клиента.</p>
+              <span data-i18n="news.items.0.kicker"></span>
+              <strong data-i18n="news.items.0.title"></strong>
+              <p data-i18n="news.items.0.text"></p>
             </div>
           </article>
           <article class="news-item">
             <img src="./assets/cards/mage.png" alt="" />
             <div>
-              <span>Patch notes</span>
-              <strong>Обновлены экраны классов и медиа</strong>
+              <span data-i18n="news.items.1.kicker"></span>
+              <strong data-i18n="news.items.1.title"></strong>
             </div>
           </article>
         </section>
 
-        <footer class="footer-line">
-          <span>CEF launcher shell</span>
-          <span>Local assets mode</span>
-        </footer>
+        <div class="patch-card">
+          <div class="patch-heading">
+            <div>
+              <span class="muted-label" data-i18n="patch.versionLabel"></span>
+              <strong id="versionLabel">0.9.12-live</strong>
+            </div>
+            <span class="build-badge" id="buildBadge" data-i18n="patch.readyBadge"></span>
+          </div>
+
+          <div class="progress-shell" data-i18n-attr="aria-label:aria.progress">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-meta">
+            <span id="statusText" data-i18n="patch.readyStatus"></span>
+            <span id="progressText">100%</span>
+          </div>
+
+          <div class="launcher-actions">
+            <button class="secondary-button" type="button" data-action="verify" data-i18n="patch.verify"></button>
+            <button class="play-button" type="button" data-action="play">
+              <span data-i18n="patch.play"></span>
+            </button>
+          </div>
+        </div>
       </section>
+
+      <div class="auth-modal" id="authModal" aria-hidden="true">
+        <div class="auth-backdrop" data-action="auth-close"></div>
+        <form class="auth-dialog" id="authForm" role="dialog" aria-modal="true" data-i18n-attr="aria-label:auth.title">
+          <div class="auth-heading">
+            <div>
+              <span class="muted-label" data-i18n="account.label"></span>
+              <h2 data-i18n="auth.title"></h2>
+            </div>
+            <button class="window-button close" type="button" data-action="auth-close" data-i18n-attr="aria-label:aria.close"></button>
+          </div>
+
+          <label class="auth-field">
+            <span data-i18n="auth.loginLabel"></span>
+            <input id="authLogin" type="text" autocomplete="username" data-i18n-attr="placeholder:auth.loginPlaceholder" required />
+          </label>
+
+          <label class="auth-field">
+            <span data-i18n="auth.passwordLabel"></span>
+            <input id="authPassword" type="password" autocomplete="current-password" data-i18n-attr="placeholder:auth.passwordPlaceholder" required />
+          </label>
+
+          <p class="auth-note" data-i18n="auth.testNote"></p>
+
+          <div class="auth-actions">
+            <button class="secondary-button" type="button" data-action="auth-close" data-i18n="auth.cancel"></button>
+            <button class="play-button" type="submit" data-i18n="auth.submit"></button>
+          </div>
+        </form>
+      </div>
     </main>
 
     <script src="./app.js"></script>

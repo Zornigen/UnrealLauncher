@@ -20,5 +20,6 @@
   <ItemGroup>
     <Content Include="index.html;styles.css;app.js;README.md" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="assets\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="locales\**\*.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

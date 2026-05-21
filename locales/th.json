@@ -1,0 +1,66 @@
+{
+  "aria": {
+    "heroPane": "Launcher hero screen",
+    "topActions": "External links and window controls",
+    "minimize": "Minimize",
+    "close": "Close",
+    "serverStatus": "Server status",
+    "controlPane": "Control panel",
+    "news": "News",
+    "progress": "Update progress"
+  },
+  "hero": {
+    "titleTop": "New client",
+    "titleBottom": "for the old world",
+    "subtitle": "File verification, update status, and game launch from one launcher."
+  },
+  "badge": {
+    "pairs": [
+      { "old": "Serious Engine 1.5", "new": "Unreal Engine 5.7" },
+      { "old": "DirectX 8.1", "new": "DirectX 12" },
+      { "old": "ASCII Shaders", "new": "HLSL Shaders" },
+      { "old": "CPU Particles", "new": "Niagara FX" },
+      { "old": "Baked Lighting", "new": "Lumen GI" }
+    ]
+  },
+  "server": { "online": "Server online", "players": "players in world" },
+  "account": {
+    "label": "Account",
+    "guestLabel": "Account not signed in",
+    "authorizedLabel": "Account signed in",
+    "guest": "Sign in to launch the game client",
+    "hint": "",
+    "login": "Sign in",
+    "authorized": "Account signed in",
+    "logout": "Sign out"
+  },
+  "news": {
+    "title": "Latest news",
+    "all": "All",
+    "items": [
+      { "kicker": "Devlog 04", "title": "Launcher build started on WebView2", "text": "The interface shell is being prepared for the patcher, CDN, and native game launch flow." },
+      { "kicker": "Patch notes", "title": "Class and media screens updated" }
+    ]
+  },
+  "patch": {
+    "versionLabel": "Current version",
+    "readyBadge": "Ready",
+    "checkingBadge": "Checking",
+    "launchingBadge": "Launch",
+    "readyStatus": "Client verified. Ready to play.",
+    "checkingStatus": "Checking manifest and local files...",
+    "launchingStatus": "Launching game client...",
+    "verify": "Verify",
+    "play": "Play"
+  },
+  "auth": {
+    "title": "Sign in",
+    "loginLabel": "Login or email",
+    "loginPlaceholder": "Enter any login",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Any password",
+    "testNote": "Test mode: any credentials are accepted for now.",
+    "cancel": "Cancel",
+    "submit": "Sign in"
+  }
+}

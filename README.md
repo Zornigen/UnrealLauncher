@@ -22,6 +22,7 @@ In `Debug`, the native shell loads `index.html`, `styles.css`, `app.js`, and `as
 - `index.html` - static launcher markup.
 - `styles.css` - cinematic launcher UI based on the UnrealSite visual direction.
 - `app.js` - UI state controller and temporary native bridge fallback.
+- `locales/` - UI text dictionaries loaded by the launcher.
 - `UnrealLauncher.csproj` - WinForms + WebView2 native shell.
 - `Native/` - Windows host window and WebView2 bridge.
 - `assets/` - local fonts and images copied from `UnrealSite` until CDN/deploy is split out.

@@ -1,0 +1,76 @@
+{
+  "aria": {
+    "heroPane": "Главный экран лаунчера",
+    "topActions": "Внешние ссылки и управление окном",
+    "minimize": "Свернуть",
+    "close": "Закрыть",
+    "serverStatus": "Статус сервера",
+    "controlPane": "Панель управления",
+    "news": "Новости",
+    "progress": "Прогресс обновления"
+  },
+  "hero": {
+    "titleTop": "Новый клиент",
+    "titleBottom": "для старого мира",
+    "subtitle": "Проверка файлов, быстрый выбор канала обновлений и запуск игры из одного лаунчера."
+  },
+  "badge": {
+    "pairs": [
+      { "old": "Serious Engine 1.5", "new": "Unreal Engine 5.7" },
+      { "old": "DirectX 8.1", "new": "DirectX 12" },
+      { "old": "ASCII Shaders", "new": "HLSL Shaders" },
+      { "old": "CPU Particles", "new": "Niagara FX" },
+      { "old": "Baked Lighting", "new": "Lumen GI" }
+    ]
+  },
+  "server": {
+    "online": "Сервер онлайн",
+    "players": "игрока в мире"
+  },
+  "account": {
+    "label": "Аккаунт",
+    "guestLabel": "Аккаунт не авторизован",
+    "authorizedLabel": "Аккаунт авторизован",
+    "guest": "Войдите, чтобы запустить игровой клиент",
+    "hint": "",
+    "login": "Авторизоваться",
+    "authorized": "Аккаунт авторизован",
+    "logout": "Выйти"
+  },
+  "news": {
+    "title": "Последние новости",
+    "all": "Все",
+    "items": [
+      {
+        "kicker": "Devlog 04",
+        "title": "Началась сборка лаунчера под WebView2",
+        "text": "Каркас интерфейса готовится к подключению патчера, CDN и нативного запуска клиента."
+      },
+      {
+        "kicker": "Patch notes",
+        "title": "Обновлены экраны классов и медиа"
+      }
+    ]
+  },
+  "patch": {
+    "versionLabel": "Текущая версия",
+    "readyBadge": "Готово",
+    "checkingBadge": "Проверка",
+    "launchingBadge": "Запуск",
+    "readyStatus": "Клиент проверен. Можно запускать игру.",
+    "checkingStatus": "Проверка манифеста и локальных файлов...",
+    "launchingStatus": "Запуск игрового клиента...",
+    "verify": "Проверить",
+    "play": "Играть"
+  },
+  "auth": {
+    "title": "Авторизация",
+    "loginLabel": "Логин или email",
+    "loginPlaceholder": "Введите любой логин",
+    "passwordLabel": "Пароль",
+    "passwordPlaceholder": "Любой пароль",
+    "testNote": "Тестовый режим: сейчас принимаются любые данные.",
+    "cancel": "Отмена",
+    "submit": "Войти"
+  }
+}
