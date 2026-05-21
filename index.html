@@ -10,13 +10,21 @@
   <body>
     <main class="launcher-shell" data-state="ready">
       <section class="hero-pane" aria-label="Главный экран лаунчера">
-        <img class="hero-backdrop" src="./assets/media/hero-start-poster.webp" alt="" />
+        <video class="hero-backdrop" autoplay muted loop playsinline poster="./assets/media/hero-start-poster.webp">
+          <source src="./assets/media/hero-start.mp4" type="video/mp4" />
+        </video>
         <div class="hero-vignette"></div>
 
         <header class="topbar">
-          <div class="brand-mark" aria-label="UnreaL LastChaoS">
-            <span class="brand-top">UnreaL</span>
-            <span class="brand-bottom">LastChaoS</span>
+          <div class="brand-mark embossed-title" aria-label="UNREAL LAST CHAOS">
+            <span class="title-line brand-top">
+              <span class="title-back">UnreaL</span>
+              <span class="title-front">UnreaL</span>
+            </span>
+            <span class="title-line brand-bottom">
+              <span class="title-back">LastChaoS</span>
+              <span class="title-front">LastChaoS</span>
+            </span>
           </div>
           <nav class="top-actions" aria-label="Внешние ссылки">
             <button class="icon-button" type="button" data-action="open-link" data-url="https://discord.com" aria-label="Discord">

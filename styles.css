@@ -108,29 +108,75 @@ button {
 .brand-mark {
   display: inline-flex;
   flex-direction: column;
-  text-transform: uppercase;
-  text-shadow: 0 0 18px rgba(88, 185, 255, 0.4);
+  align-items: flex-start;
+  letter-spacing: -0.035em;
 }
 
 .brand-top,
 .brand-bottom {
   font-family: "Abaddon", "Beaufort", sans-serif;
-  line-height: 0.78;
-  letter-spacing: 0;
-  background: linear-gradient(180deg, #ffffff, #b7c5d1 72%, #74808c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0.7px rgba(137, 213, 255, 0.86);
 }
 
 .brand-top {
-  font-size: 72px;
+  font-size: 106px;
+  line-height: 0.78;
+  transform: scaleX(1.06);
+  transform-origin: left bottom;
 }
 
 .brand-bottom {
-  font-size: 48px;
-  margin-left: 5px;
+  margin-top: 0.08em;
+  margin-left: 4px;
+  font-size: 72px;
+  line-height: 0.9;
+}
+
+.embossed-title {
+  letter-spacing: -0.035em;
+}
+
+.title-line {
+  position: relative;
+  display: inline-block;
+}
+
+.title-back,
+.title-front {
+  display: block;
+}
+
+.title-back {
+  position: absolute;
+  inset: 0;
+  color: rgba(79, 187, 255, 0.4);
+  text-shadow:
+    0 0 10px rgba(52, 183, 255, 0.24),
+    0 0 18px rgba(52, 183, 255, 0.14);
+  filter: blur(1.25px);
+  transform: translate(0.012em, 0.017em);
+  opacity: 0.88;
+}
+
+.title-front {
+  position: relative;
+  z-index: 1;
+  color: #eef3f8;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f9fb 22%,
+    #d4d8de 54%,
+    #a5adb6 76%,
+    #7f8994 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.68px rgba(111, 208, 255, 0.92);
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.86),
+    0 0 6px rgba(78, 194, 255, 0.34),
+    0 0 14px rgba(34, 162, 235, 0.18);
 }
 
 .top-actions {
