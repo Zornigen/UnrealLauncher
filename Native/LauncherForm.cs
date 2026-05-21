@@ -47,7 +47,7 @@ public sealed class LauncherForm : Form
         var environment = await CoreWebView2Environment.CreateAsync(userDataFolder: userDataFolder);
         await webView.EnsureCoreWebView2Async(environment);
 
-        var webRoot = AppContext.BaseDirectory;
+        var webRoot = ResolveWebRoot();
         webView.CoreWebView2.SetVirtualHostNameToFolderMapping(
             VirtualHost,
             webRoot,
@@ -58,6 +58,26 @@ public sealed class LauncherForm : Form
         webView.CoreWebView2.WebMessageReceived += OnWebMessageReceived;
         await webView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(CreateBridgeScript());
         webView.CoreWebView2.Navigate($"https://{VirtualHost}/index.html");
+    }
+
+    private static string ResolveWebRoot()
+    {
+#if DEBUG
+        var directory = new DirectoryInfo(AppContext.BaseDirectory);
+        while (directory is not null)
+        {
+            var indexPath = Path.Combine(directory.FullName, "index.html");
+            var projectPath = Path.Combine(directory.FullName, "UnrealLauncher.csproj");
+            if (File.Exists(indexPath) && File.Exists(projectPath))
+            {
+                return directory.FullName;
+            }
+
+            directory = directory.Parent;
+        }
+#endif
+
+        return AppContext.BaseDirectory;
     }
 
     protected override void WndProc(ref Message m)

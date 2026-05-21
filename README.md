@@ -15,6 +15,8 @@ dotnet build -c Debug
 .\bin\Debug\net8.0-windows\UnrealLauncher.exe
 ```
 
+In `Debug`, the native shell loads `index.html`, `styles.css`, `app.js`, and `assets/` from the repository root. After rebuilding the native shell once, UI/style changes only need a launcher restart or WebView refresh, not another `dotnet build`.
+
 ## Structure
 
 - `index.html` - static launcher markup.
