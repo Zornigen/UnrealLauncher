@@ -36,6 +36,19 @@
             <button class="icon-button" type="button" data-action="open-link" data-url="https://vk.com" aria-label="VK">
               VK
             </button>
+            <div class="lang-switcher" id="langSwitcher">
+              <button class="lang-trigger" type="button" data-action="locale-toggle" aria-label="Language" aria-expanded="false">
+                <span id="localeLabel">RU</span>
+              </button>
+              <div class="lang-menu" role="menu" aria-label="Language list">
+                <button type="button" class="lang-option is-active" data-action="locale-select" data-locale="ru">RU</button>
+                <button type="button" class="lang-option" data-action="locale-select" data-locale="en">EN</button>
+                <button type="button" class="lang-option" data-action="locale-select" data-locale="de">DE</button>
+                <button type="button" class="lang-option" data-action="locale-select" data-locale="fr">FR</button>
+                <button type="button" class="lang-option" data-action="locale-select" data-locale="ja">JA</button>
+                <button type="button" class="lang-option" data-action="locale-select" data-locale="th">TH</button>
+              </div>
+            </div>
             <button class="window-button" type="button" data-action="minimize" aria-label="Свернуть"></button>
             <button class="window-button close" type="button" data-action="close" aria-label="Закрыть"></button>
           </nav>

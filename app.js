@@ -7,6 +7,9 @@ const versionLabel = document.querySelector("#versionLabel");
 const engineBadge = document.querySelector("#engineBadge");
 const badgeOld = document.querySelector("#badgeOld");
 const badgeNew = document.querySelector("#badgeNew");
+const langSwitcher = document.querySelector("#langSwitcher");
+const localeLabel = document.querySelector("#localeLabel");
+const localeOptions = ["ru", "en", "de", "fr", "ja", "th"];
 
 const badgeSteps = ["old", "strike", "morph", "new", "new"];
 const badgePairs = [
@@ -58,6 +61,21 @@ function setState(state, text, badge) {
   buildBadge.textContent = badge;
 }
 
+function setLocale(locale) {
+  const safeLocale = localeOptions.includes(locale) ? locale : "ru";
+  document.documentElement.lang = safeLocale;
+  window.localStorage.setItem("launcher-locale", safeLocale);
+  localeLabel.textContent = safeLocale.toUpperCase();
+  document.querySelectorAll(".lang-option").forEach((option) => {
+    option.classList.toggle("is-active", option.dataset.locale === safeLocale);
+  });
+}
+
+function closeLocaleMenu() {
+  langSwitcher.classList.remove("is-open");
+  langSwitcher.querySelector(".lang-trigger").setAttribute("aria-expanded", "false");
+}
+
 function simulateVerify() {
   window.clearInterval(progressTimer);
   nativeBridge.verify(currentChannel);
@@ -87,6 +105,16 @@ document.addEventListener("click", (event) => {
     simulateVerify();
   }
 
+  if (action === "locale-toggle") {
+    const isOpen = langSwitcher.classList.toggle("is-open");
+    target.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  if (action === "locale-select") {
+    setLocale(target.dataset.locale);
+    closeLocaleMenu();
+  }
+
   if (action === "play") {
     nativeBridge.play(currentChannel);
     setState("launching", "Запуск игрового клиента...", "Запуск");
@@ -110,7 +138,7 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("pointerdown", (event) => {
-  if (event.button !== 0 || event.clientY > 84 || event.clientX > window.innerWidth - 260) {
+  if (event.button !== 0 || event.clientY > 84 || event.clientX > window.innerWidth - 460) {
     return;
   }
 
@@ -119,6 +147,20 @@ document.addEventListener("pointerdown", (event) => {
   }
 
   nativeBridge.beginDrag();
+});
+
+document.addEventListener("pointerdown", (event) => {
+  if (event.target.closest(".lang-switcher")) {
+    return;
+  }
+
+  closeLocaleMenu();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeLocaleMenu();
+  }
 });
 
 window.setInterval(() => {
@@ -135,3 +177,4 @@ window.setInterval(() => {
 }, 860);
 
 setProgress(100);
+setLocale(window.localStorage.getItem("launcher-locale") ?? "ru");
